@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Testing Rotate 1</title>
+  <style type="text/css">
+    body{
+      background: #663399;
+      height: 100vh;
+       display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      overflow: hidden;
+    }
+    .swatch{
+      position: relative;
+
+    }
+    .swatch div {
+    width: 70px;
+    height: 225px;
+    position: absolute;
+    top: 0px;
+    border-radius: 5px;
+    border-top: solid 2px rgba(0, 0, 0, 0.2);
+    border-left: solid 3px rgba(255, 255, 255, 0.2);
+    border-bottom: solid 3px rgba(0, 0, 0, 0.2);
+  
+    transform-origin: center 90%;
+    transform: rotate(0deg);
+    transition: all 0.5s;
+  }
+    .swatch div:before{
+      content: '';
+      width: 16px;
+      height: 16px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 10px;
+      left: 35%;
+
+    }
+    div:nth-child(1){
+      background-color: purple;
+    }
+     div:nth-child(2){
+      background-color: orange;
+    }
+    div:nth-child(3){
+      background-color: green;
+    }
+     div:nth-child(4){
+      background-color: yellow;
+    }
+    div:nth-child(5){
+      background-color: grey;
+    }
+    div:nth-child(6){
+      background-color: blue;
+    }
+     .swatch:hover div:nth-child(1){
+      transform: rotate(-65deg);
+    }
+    .swatch:hover div:nth-child(2){
+      transform: rotate(-40deg);
+    }
+     .swatch:hover div:nth-child(3){
+      transform: rotate(-15deg);
+    }
+     .swatch:hover div:nth-child(4){
+      transform: rotate(15deg);
+    }
+     .swatch:hover div:nth-child(5){
+      transform: rotate(40deg);
+    }
+     .swatch:hover div:nth-child(6){
+      transform: rotate(65deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="swatch">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+</html>
